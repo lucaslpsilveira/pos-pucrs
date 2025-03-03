@@ -1,0 +1,46 @@
+<script>
+    console.log("[Fila/Qeue]");
+    
+    let fila = [
+        'script.js',
+        'style.css',
+        'imagem.png'
+    ];        
+
+    class Queue {   
+        constructor() {
+            this.data = [];
+        }     
+        enqueue(nome) {
+            this.data.push(nome);
+        }
+        dequeue(){
+            this.data.shift();
+        }
+        print(){
+            console.log(this.data);
+        }
+    }
+
+    let requests = new Queue();
+
+    for(req of fila){
+        requests.enqueue(req);
+    }
+    
+    console.log('Fila original:');
+    requests.print();
+
+    requests.enqueue('doguinho.jpg');
+    console.log('Fila após o push');
+    requests.print();
+
+    requests.dequeue();
+    console.log('Fila após shift:');    
+    requests.print();
+
+</script>
+
+
+
+<link rel="stylesheet" href="./style.css"/>

@@ -1,0 +1,27 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Browser - Lucas Silveira</title>
+    </head>
+    <body>
+
+        <script>
+            let abas = [
+                {"nome": "Exemplo Fila", "url": "./fila.html"},
+                {"nome": "Exemplo Pilha", "url": "./pilha.html"},
+                {"nome": "Exemplo Map", "url": "./map.html"},
+                {"nome": "Exemplo Set", "url": "./set.html"}
+            ]
+
+            for (aba of abas) {
+                console.log(aba.nome)
+
+                var valorAtualDoHTML = document.body.innerHTML;
+                document.body.innerHTML = valorAtualDoHTML + '<li><a href="' + aba.url + '">' + aba.nome + '</a><br></li>';
+            }
+        </script>
+        <link rel="stylesheet" href="./style.css"/>
+    </body>
+</html>
