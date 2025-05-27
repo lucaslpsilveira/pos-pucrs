@@ -1,0 +1,20 @@
+//Clonar repositório
+git clone <link repositório>
+
+//adicionar ao index
+git add . ou git add <nome do arquivo>
+
+//Adicionar mudanças ao commit
+git commit -m "mudanças realizadas"
+
+//Enviar para repositório online
+git push
+
+//Criar nova branch local
+git checkout -b <nome da branch>
+
+//Trocar de branch
+git checkout <nome da branch>
+
+//merge
+git merge <nome da branch>

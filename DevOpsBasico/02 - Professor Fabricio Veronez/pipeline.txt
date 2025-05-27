@@ -1,0 +1,2 @@
+Configurada pipeline no repositório abaixo:
+https://github.com/lucaslpsilveira/conversao-temperatura/actions

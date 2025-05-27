@@ -1,0 +1,30 @@
+// Criar container de exemplo
+docker container run hello-world
+--name nome-container
+--rm  //quando finaliza exevução exclui automaticamente
+-f //foraçar execução
+-it //modo interativo para poder mexer no terminal
+$(docker container ls -qa) //subcomando
+
+// ver containers
+docker container ls ou ps
+
+-a para ver todos até os finalizados
+
+//deletar container
+docker container rm id ou nome
+
+// rodar processo continuamente
+docker container run -d nginx
+
+// Entrar no container
+docker container exec -it <id-container> /bin/bash
+
+//port bind
+docker container run -d -p <porta local>:<porta cotainer> nginx
+
+//mongo db
+docker container run -d -p 27017:27017 -e MONGO_INITDB_ROOT_USERNAME=mongouser -e MONGO_INITDB_ROOT_PASSWORD=mongopwd mongo
+
+//Robo 3T para acessar o mongo db
+

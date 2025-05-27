@@ -1,0 +1,23 @@
+//Para criar o docker com base no dockerfile
+docker build -t aula-ubuntu-curl <local-dockerfile>
+
+//acessar container
+docker container run -it aula-ubuntu-curl
+
+//criar imagem com versionamento
+docker build -t name-space/aula-ubuntu-curl:v1 -f Dockerfile <local-dockerfile>
+
+//limpar imagens não utilizadas
+docker image prune
+
+//autenticar
+docker login
+
+//logout
+docker logout
+
+//subir imagem
+docker push name-space/aula-ubuntu-curl:latest
+
+//rodar o appnode
+docker container run -d -p 8080:8080 <nome-da-imagem>
